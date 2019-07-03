@@ -4,9 +4,15 @@ import "./App.css";
 import Tooltip from "./composition/Tooltip";
 
 // make 2 tooltips here and another inside the App directly
-const firstTooltip = <Tooltip message="tooltip message">ipsum</Tooltip>;
+const firstTooltip = (
+  <Tooltip color="hotpink" message="tooltip message">
+    ipsum
+  </Tooltip>
+);
 const secondTooltip = (
-  <Tooltip message="another tooltip message">officiis</Tooltip>
+  <Tooltip color="#126BCC" message="another tooltip message">
+    officiis
+  </Tooltip>
 );
 
 function App() {

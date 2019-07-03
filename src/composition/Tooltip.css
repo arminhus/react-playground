@@ -3,9 +3,9 @@
   cursor: pointer;
 }
 
-.Tooltip-content {
+/* .Tooltip-content {
   color: #01a800;
-}
+} */
 
 .Tooltip-message {
   background-color: hsla(0, 0%, 10%, 0.9);
