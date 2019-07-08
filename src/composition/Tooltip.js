@@ -1,16 +1,16 @@
 import React from "react";
 import "./Tooltip.css";
 
-let Tooltip = props => {
-  return (
-    <span className="Tooltip">
-      <span className="Tooltip-content" style={{ color: props.color }}>
-        {props.children}
-      </span>
-      <span className="Tooltip-message">{props.message}</span>
-    </span>
-  );
-};
+// let Tooltip = props => {
+//   return (
+//     <span className="Tooltip">
+//       <span className="Tooltip-content" style={{ color: props.color }}>
+//         {props.children}
+//       </span>
+//       <span className="Tooltip-message">{props.message}</span>
+//     </span>
+//   );
+// };
 
 class TooltipClass extends React.Component {
   static defaultProps = {
