@@ -2,7 +2,8 @@ import React, { Component } from "react";
 // import Split from "./composition/Split";
 import "./App.css";
 // import Tooltip from "./composition/Tooltip";
-import Messages from "./Messages";
+// import Messages from "./Messages";
+import TheDate from "./state/TheDate";
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
@@ -41,11 +42,12 @@ import Messages from "./Messages";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>YOUR APPLICATION NAME!</h1>
-        <Messages name="Messages" unread={0} />
-        <Messages name="Notifications" unread={10} />
-      </div>
+      // <div className="App">
+      //   <h1>YOUR APPLICATION NAME!</h1>
+      //   <Messages name="Messages" unread={0} />
+      //   <Messages name="Notifications" unread={10} />
+      // </div>
+      <TheDate />
     );
   }
 }
