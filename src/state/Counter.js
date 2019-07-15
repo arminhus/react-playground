@@ -6,6 +6,7 @@ class Counter extends React.Component {
   };
 
   constructor(props) {
+    console.log("constructor props", props);
     super(props);
     this.state = {
       count: 0
@@ -15,7 +16,9 @@ class Counter extends React.Component {
   }
 
   handleButtonClick() {
-    console.log(this.state.count);
+    console.log("props in handleButtonClick", this.props);
+    console.log("state in handleButtonClick", this.state);
+    // console.log(this.state.count);
     const newCount = this.state.count + 1;
     console.log(newCount);
     this.setState({

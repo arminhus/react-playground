@@ -50,7 +50,7 @@ class App extends Component {
       // </div>
       <div>
         <TheDate />
-        <Counter />
+        <Counter count={123} />
       </div>
     );
   }
