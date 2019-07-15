@@ -4,6 +4,7 @@ import "./App.css";
 // import Tooltip from "./composition/Tooltip";
 // import Messages from "./Messages";
 import TheDate from "./state/TheDate";
+import Counter from "./state/Counter";
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
@@ -47,7 +48,10 @@ class App extends Component {
       //   <Messages name="Messages" unread={0} />
       //   <Messages name="Notifications" unread={10} />
       // </div>
-      <TheDate />
+      <div>
+        <TheDate />
+        <Counter />
+      </div>
     );
   }
 }
