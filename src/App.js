@@ -5,6 +5,7 @@ import "./App.css";
 // import Messages from "./Messages";
 import TheDate from "./state/TheDate";
 import Counter from "./state/Counter";
+import HelloWorld from "./state-drills/HelloWorld";
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
@@ -51,6 +52,7 @@ class App extends Component {
       <div>
         <TheDate />
         <Counter count={123} />
+        <HelloWorld />
       </div>
     );
   }
