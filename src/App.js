@@ -7,6 +7,7 @@ import TheDate from "./state/TheDate";
 import Counter from "./state/Counter";
 import HelloWorld from "./state-drills/HelloWorld";
 import Bomb from "./state-drills/Bomb";
+import RouletteGun from "./state-drills/RouletteGun";
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
@@ -41,7 +42,7 @@ import Bomb from "./state-drills/Bomb";
 // }
 
 // export default App;
-
+const randNum = Math.floor(Math.random() * 9);
 class App extends Component {
   render() {
     return (
@@ -55,6 +56,7 @@ class App extends Component {
         <Counter count={123} />
         <HelloWorld />
         <Bomb />
+        <RouletteGun bulletInChamber={randNum} />
       </div>
     );
   }
