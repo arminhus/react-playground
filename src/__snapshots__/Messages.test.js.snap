@@ -20,24 +20,3 @@ exports[`Message component should render ui without crashing when unread 1`] = `
   Messages
 </div>
 `;
-
-exports[`renders the UI as expected 1`] = `
-<div
-  className="messages"
->
-  Messages
-  <div
-    className="unread_count badge"
-  >
-    4
-  </div>
-</div>
-`;
-
-exports[`should render ui without crashing when unread 1`] = `
-<div
-  className="messages"
->
-  Messages
-</div>
-`;

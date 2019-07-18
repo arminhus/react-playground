@@ -71,10 +71,10 @@ class App extends Component {
       //   <Messages name="Notifications" unread={10} />
       // </div>
       <div>
-        <TheDate />
+        {/* <TheDate />
         <Counter count={123} /> <HelloWorld />
         <Bomb />
-        <RouletteGun bulletInChamber={randNum} />
+        <RouletteGun bulletInChamber={randNum} /> */}
         <Tabs tabs={tabsProp} />
       </div>
     );
