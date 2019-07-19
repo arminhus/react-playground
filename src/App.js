@@ -9,6 +9,7 @@ import HelloWorld from "./state-drills/HelloWorld";
 import Bomb from "./state-drills/Bomb";
 import RouletteGun from "./state-drills/RouletteGun";
 import Tabs from "./state/Tabs";
+import Accordion from "./state-drills/Accordion";
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
@@ -72,10 +73,11 @@ class App extends Component {
       // </div>
       <div>
         {/* <TheDate />
-        <Counter count={123} /> <HelloWorld />
-        <Bomb />
-        <RouletteGun bulletInChamber={randNum} /> */}
-        <Tabs tabs={tabsProp} />
+                <Counter count={123} /> <HelloWorld />
+                <Bomb />
+                <RouletteGun bulletInChamber={randNum} /> */}
+        {/* <Tabs tabs={tabsProp} />{" "} */}
+        <Accordion />
       </div>
     );
   }
