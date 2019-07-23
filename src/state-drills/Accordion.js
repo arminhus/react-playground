@@ -7,10 +7,16 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // thoughts
+      // since your rendering an array
+      // You can use index of each object
+      // so I created a state that tracks an index
+      activeIndex: 0,
       sections: [
         {
           title: "Section 1",
-          content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
           active: true
         },
         {
@@ -29,30 +35,38 @@ class Accordion extends React.Component {
     };
 
     this.handleTabClick = this.handleTabClick.bind(this);
-    this.updateTabs = this.updateTabs.bind(this);
+    // this.updateTabs = this.updateTabs.bind(this);
   }
 
-  updateTabs(title) {
-    let tabs = this.state.sections;
-    let newtabs = tabs.map((tab, index) => {
-      if (tab.title == title) {
-        if (tab.active == true) {
-          tab.active = false;
-        } else {
-          tab.active = true;
-        }
-      } else {
-        tab.active = false;
-      }
-      console.log(tab);
-      return tab;
-    });
-    console.log(newtabs);
-    return newtabs;
-  }
+  // updateTabs(title) {
+  //   let tabs = this.state.sections;
+  //   let newtabs = tabs.map((tab, index) => {
+  //     if (tab.title == title) {
+  //       if (tab.active == true) {
+  //         tab.active = false;
+  //       } else {
+  //         tab.active = true;
+  //       }
+  //     } else {
+  //       tab.active = false;
+  //     }
+  //     console.log(tab);
+  //     return tab;
+  //   });
+  //   console.log(newtabs);
+  //   return newtabs;
+  // }
 
-  handleTabClick(title) {
-    this.setState({ sections: this.updateTabs(title) });
+  handleTabClick(index) {
+    // thoughts
+    // so I passed an index as an argument to handle the tracking
+    // with the index here I can update the state
+    console.log("index", index);
+    if (index === this.state.activeIndex) {
+      this.setState({ activeIndex: -1 });
+    } else {
+      this.setState({ activeIndex: index });
+    }
   }
 
   render() {
@@ -60,13 +74,25 @@ class Accordion extends React.Component {
     return (
       <div id="accordion">
         {secArray.map((section, index) => {
+          // thoughts
+          // so Now I have a local variable that
+          // compares the activeIndex state and the index
+          // of the object mapped
+          // (true or false)
+          let active = this.state.activeIndex === index;
           console.log(section);
           return (
             <Tab
+              // I added a key to get that error out of the way
+              key={section.content}
               title={section.title}
-              handleclick={this.handleTabClick}
+              // I passed the index of the object mapped here
+              handleclick={() => this.handleTabClick(index)}
               content={section.content}
-              active={section.active}
+              // thoughts
+              // give the boolean variable to the active props
+              // Look inside Tab.js
+              active={active}
             />
           );
         })}
