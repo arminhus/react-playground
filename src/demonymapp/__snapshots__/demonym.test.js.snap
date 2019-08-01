@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Demonym component test should render with name and country 1`] = `
+<div
+  className="demonym"
+>
+  A 
+  American
+   comes from 
+  United States of America
+  .
+</div>
+`;
